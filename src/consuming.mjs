@@ -41,7 +41,7 @@ export function final() {
     .finally(() => {
         setTimeout(() => {
             hideWaiting();
-        }, 1500);
+        }, 1000);
 
         appendText(" -- Process Complete")
     });
