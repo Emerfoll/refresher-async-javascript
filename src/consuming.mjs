@@ -7,7 +7,7 @@ export function get() {
 }
 
 export function getCatch() {
-    axios.get("http://localhost:3000/orders/123").then(({data}) => {
+    axios.get("http://localhost:3000/orders/1234").then(({data}) => {
         setText(JSON.stringify(data));
     })
     .catch(err => setText(err));
