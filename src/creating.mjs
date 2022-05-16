@@ -50,7 +50,7 @@ export function xhr(){
                 reject(xhr.statusText);
             }
         }
-        xhr.onerror = () => reject("Request Failed!");
+        xhr.onerror = () => reject("Request Failed");
         xhr.send();
     });
 
