@@ -64,6 +64,19 @@ export function allPromises(){
     let userTypes = axios.get("http://localhost:3000/userTypes");
     let addressType = axios.get("http://localhost:3000/addressType");
 
+    Promise.all([categories, statuses, userTypes, addressType])
+    .then(([cat, stat, type, address]) => {
+        setText("");
+
+        appendText(JSON.stringify(cat.data));
+        appendText(JSON.stringify(stat.data));
+        appendText(JSON.stringify(type.data));
+        appendText(JSON.stringify(address.data));
+
+    }).catch(reasons => {
+        setText(reasons);
+    });
+
 }
 
 export function allSettled(){
