@@ -38,7 +38,7 @@ export function clearIntervalChain(){
     wait.then(text => setText(text))
     .finally(() => clearInterval(interval));
 }
-// comment comment
+// comment
 
 export function xhr(){
     let request = new Promise((resolve, reject) => {
